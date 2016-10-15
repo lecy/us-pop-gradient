@@ -127,4 +127,4 @@ my.server <- function(input, output)
 
 # LAUNCH THE APP !
 
-# shinyApp( ui = my.ui, server = my.server )
+shinyApp( ui = my.ui, server = my.server )
