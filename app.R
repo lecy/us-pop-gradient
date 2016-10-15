@@ -1,8 +1,15 @@
 
+
+###  LOAD THE DATA
+
+source( "https://raw.githubusercontent.com/lecy/us-pop-gradient/master/Data/pop_gradient.R" )
+source( "https://raw.githubusercontent.com/lecy/us-pop-gradient/master/Data/create_dmat_w_location_data.R" )
+
+
+
 ###  SHINY APP
 
-
-library( shiny )
+# library( shiny )
 
 
 
@@ -117,8 +124,7 @@ my.server <- function(input, output)
 
 
 
+
 # LAUNCH THE APP !
 
-# setwd( "C:/Users/jdlecy/Dropbox/01 - CURRENT PROJECTS/Stats Ind Study Wolf/R Code" )
-
-shinyApp( ui = my.ui, server = my.server )
+# shinyApp( ui = my.ui, server = my.server )
