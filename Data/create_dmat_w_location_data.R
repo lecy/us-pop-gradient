@@ -1609,3 +1609,14 @@ gcd.hf <- function(long1, lat1, long2, lat2)
 
 d.mat <- calcDists( locations, toMiles=T ) # in miles
 
+
+
+
+
+# CLEAN UP
+
+rm( calcDists ) 
+em( deg2rad )   
+rm( gcd.hf )    
+rm( locations )
+
