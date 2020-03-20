@@ -12,27 +12,22 @@ source( "https://raw.githubusercontent.com/lecy/us-pop-gradient/master/Data/crea
 # for information on available shapefiles:
 # https://www.census.gov/geo/maps-data/data/tiger-line.html
 
-dir.create( "shapefiles" )
-
-setwd( "./shapefiles" )
-
-
-download.file("ftp://ftp2.census.gov/geo/tiger/TIGER2015/COUNTY/tl_2015_us_county.zip", "us_counties.zip" )
-
-unzip( "us_counties.zip" )
-
-file.remove( "us_counties.zip" )
-
-
-
+# dir.create( "shapefiles" )
+# setwd( "./shapefiles" )
+# download.file("ftp://ftp2.census.gov/geo/tiger/TIGER2015/COUNTY/tl_2015_us_county.zip", "us_counties.zip" )
+# unzip( "us_counties.zip" )
+# file.remove( "us_counties.zip" )
+#
 # load the shapefile
-
-library( maptools )
-library( sp )
-
-usa <- readShapePoly( fn="tl_2015_us_county",
-                       proj4string=CRS("+proj=longlat +datum=WGS84") )
+#
+# library( maptools )
+# library( sp )
+# 
+# usa <- readShapePoly( fn="tl_2015_us_county",
+#                        proj4string=CRS("+proj=longlat +datum=WGS84") )
                        
+
+usa <- tigris::counties()
 
 # remove alaska and hawaii
 
